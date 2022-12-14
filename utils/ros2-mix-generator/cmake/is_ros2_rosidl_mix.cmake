@@ -66,6 +66,9 @@ function(is_ros2_rosidl_mix)
         endif()
     endforeach()
 
+    find_package(Python3 REQUIRED)
+    set(PYTHON_EXECUTABLE ${Python3_EXECUTABLE})
+
     is_mix_generator(
         IDL_TYPE
             rosidl
